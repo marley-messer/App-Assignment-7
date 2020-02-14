@@ -98,9 +98,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?.</p>  
 		
-		<a href="#two" class="w3-btn w3-black"> YES </a>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a>
 		
-		<a href="#two" class="w3-btn w3-black"> NO </a>
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> NO </a>
 		
     	</div>
 	
@@ -114,16 +114,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 	<p>Do you have a fever?.</p>
 		
-		<a href="#three" class="w3-btn w3-black"> YES </a>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> YES </a>
 		
-		<a href="#three" class="w3-btn w3-black"> NO </a>
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a>
 		
 	</div>
 	
 </div>	
-	
 
-<div class="page" id="four">
+<div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
@@ -131,9 +130,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 	<p>Do you have a sour throat?.</p>
 		
-		<a href="#four" class="w3-btn w3-black"> YES </a>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> YES </a>
 		
-		<a href="#four" class="w3-btn w3-black"> NO </a>
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a>
+		
+	</div>
+	
+</div>	
+
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are your symptoms seasonal or chronic?.</p>
+		
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a>
+		
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> NO </a>
 		
 	</div>
 	
@@ -150,24 +165,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#five" class="w3-btn w3-black"> Results </a>
 	
 	</div>
+
+/div>
 	
-</div>
-	
-<div class="page" id="three">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic??.</p>
-		
-		<a href="#five" class="w3-btn w3-black"> YES </a>
-		
-		<a href="#five" class="w3-btn w3-black"> NO </a>
-		
-	</div>
-	
-</div>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
