@@ -34,11 +34,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
-<script>
+	<script>
         var allergy_count = 0;
         var cold_count = 0;
-
+	var resultText = document.getElementById("results")
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -48,9 +47,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count);
         }
-
-  </script>
+	var allergyPercent=0;
+	var coldPercent=0;
+	function results(){
+		var allergyPercent= allergy_count/(allergy_count + cold_count) * 100;
+		var coldPercent= cold_count/(allergy_count + cold_count) * 100;
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent 
+	
+	}
+	</script>
 
 
 
@@ -162,8 +170,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 	<p>Click for results.</p>
 		
-		<a href="#five" class="w3-btn w3-black"> Results </a>
+		<a href="#five" class="w3-btn w3-black"> Click for Results </a>
 	
+	</div>
+
+/div>
+
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>YourResults</h1>
+		<p id="results"></p>
+		<p> Page 6</p>
+		
 	</div>
 
 /div>
