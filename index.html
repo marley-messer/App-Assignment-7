@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of this code is to create an app in which the user can answer simple yes and no questions and determine whether they have a cold or allergies.
+The goal of this code is to create an app in which the user can answer simple questions and determine their likelyhood of havinf COVID-19.
  
 Known Issues:
 The app does not back track
@@ -36,27 +36,45 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!-- The following is what is used to create the function that relates the answers to whether or not the user has a cold or allergies-->
 	<script>
-        var allergy_count = 0;
+        var covid_count = 0;
         var cold_count = 0;
+	var flu_count = 0;
+        var allergy_count = 0;
 	
+	
+        function covidAdd(){
+            covid_count = covid_count + 1;
+	
+        }
+	
+	 function coldAdd(){
+            cold_count = cold_count + 1;
+	
+        }
+		
+	function fluAdd(){
+            flu_count = flu_count + 1;
+		
 
+        }
+		
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-	
-        }
 	var allergyPercent=0;
 	var coldPercent=0;
+	var fluPercent=0
+	var covidPercent=0
 	function results() {
-		var allergyPercent= allergy_count/ (allergy_count + cold_count) * 100;
-		var coldPercent= cold_count/ (allergy_count + cold_count) * 100;
+		var allergyPercent= allergy_count/ (covid_count + flu_count + allergy_count + cold_count) * 100;
+		var coldPercent= cold_count/ (covid_count + flu_count + allergy_count + cold_count) * 100;
+		var fluPercent= flu_count/ (covid_count + flu_count + allergy_count + cold_count) * 100;
+		var covidPercent= covid_count/ (covid_count + flu_count + allergy_count + cold_count) * 100;
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold=" + coldPercent;
+		resultText.innerHTML = "Probability it is COVID-19 =" + covidPercent + "%<br> Probability it is a cold=" + coldPercent + "%<br> Probability it is the flu=" + fluPercent + "%<br> Probability it is allergies=" + allergyPercent;
 	
 	}
 	</script>
