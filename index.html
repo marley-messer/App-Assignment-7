@@ -106,34 +106,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	}
 		
-	var chartData = {
-    	labels: ["COVID-19", "Flu", "Cold", "Allergies"],
-    	datasets: [
-        {
-            fillColor: "#79D1CF",
-            strokeColor: "#79D1CF",
-            data: [covidPercent, fluPercent, coldPercent, allergyPercent]
-        }
-    ]
-};
-	var ctx = document.getElementById("myChart1").getContext("2d");
-	var myBar = new Chart(ctx).Bar(chartData, {
-    	showTooltips: false,
-    	onAnimationComplete: function () {
-
-        var ctx = this.chart.ctx;
-        ctx.font = this.scale.font;
-        ctx.fillStyle = this.scale.textColor
-        ctx.textAlign = "center";
-        ctx.textBaseline = "bottom";
-
-        this.datasets.forEach(function (dataset) {
-            dataset.bars.forEach(function (bar) {
-                ctx.fillText(bar.value, bar.x, bar.y - 5);
-            });
-        })
-    }
-});
+	
 	</script>
 
 <!--This sets up the layout of the app and creates how it is displayed -->
