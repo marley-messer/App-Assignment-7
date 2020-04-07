@@ -171,11 +171,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a sour throat?.</p>
+	<p>Describe your cough.</p>
 		
-		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> YES </a>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Common, mild  </a>
 		
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a>
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> Rare, unless it triggers asthma  </a>
+		
+		<a href="#four" onclick="covidAdd(); fluAdd();" class="w3-btn w3-black"> Common, usually dry  </a>
+		
 		
 	</div>
 	
@@ -189,11 +192,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?.</p>
+	<p>Describe your fever symptoms.</p>
 		
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> SEASONAL </a>
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Do not have a fever </a>
 		
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> CHRONIC </a>
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> For a short period  </a>
+		
+		<a href="#five" onclick="covidAdd(); fluAdd();" class="w3-btn w3-black"> Common </a>
 		
 	</div>
 	
@@ -207,11 +212,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Is your face and/or eyes swollen?.</p>
+	<p>Do you feel tired or week?.</p>
 		
-		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> YES </a>
+		<a href="#six" onclick="fluAdd();" class="w3-btn w3-black"> Commonly </a>
 		
-		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> NO </a>
+		<a href="#six" onclick="coldAdd(); covidAdd(); allergyAdd()" class="w3-btn w3-black"> Sometimes </a>
 		
 	</div>
 	
@@ -225,11 +230,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Is your nose running?.</p>
+	<p>Do you get headaches?.</p>
 		
-		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> YES </a>
+		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> Rarely </a>
 		
-		<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-black"> NO </a>
+		<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-black"> Sometimes (related to sinus pain) </a>
+		
+		<a href="#seven" onclick="fluAdd();" class="w3-btn w3-black"> Commonly </a>
+		
+		<a href="#seven" onclick="covidAdd();" class="w3-btn w3-black"> Sometimes </a>
 		
 	</div>
 	
