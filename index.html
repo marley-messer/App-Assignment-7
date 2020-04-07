@@ -36,6 +36,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!-- The following is what is used to create the function that relates the answers to whether or not the user has a cold or allergies-->
 	<script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script type="text/javascript">
+
+	window.onload = function () {
+	var chart = new CanvasJS.Chart("myChart", {
+
+		
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "column",
+			dataPoints: [
+				{ label: "COVID-19",  y: covidPercent  },
+				{ label: "Flu", y: fluPercent },
+				{ label: "Cold", y: coldPercent  },
+				{ label: "Allergies",  y: allergypercent  },
+			
+			]
+		}
+		]
+	});
+	chart.render();
+}
 		
 	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
@@ -295,7 +318,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Your Results</h1>
 	        <p id="results">Results Here</p>
-	<canvas id="myChart1" height="300" width="500"></canvas><script src='./javascript/game.js'></script>
+	<div id="myChart" style="height: 300px; width: 100%;"></div>
 	
 	</div>
 
